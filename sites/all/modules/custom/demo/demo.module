@@ -24,3 +24,35 @@ function demo_node_view($node, $view_mode, $langcode) {
 
 	krumo($node);
 }
+
+/**
+ * Implements hook_menu
+ */
+function mymodule_menu(){
+	$items['about'] = array(
+		'title' 			=> 'About us',
+		'description'		=> 'A description of us.',
+		'page callback' 	=> 'mymodule_about',
+		'access arguments'	=> array('access content'),
+	);
+	return $items;
+}
+
+/**
+ * Implements form_hook
+ */
+function example_color_form() {
+	$form['color'] = array(
+		'#type'		=>	'select',
+		'#title'	=>	t('Favourite colour'),
+		'#options'	=>	drupal_map_assoc(array(
+			t('red'),t('blue'),t('periwinkle'),
+		)),
+	);
+	$form['submit']	= array(
+		'#type'		=> 'submit',
+		'#value'	=>	t('Submit'),
+	);
+
+	return $form;
+}

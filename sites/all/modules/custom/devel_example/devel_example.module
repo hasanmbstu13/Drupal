@@ -12,6 +12,6 @@ function devel_example_init() {
 	// dsm($user, 'variable 1');
 	// dsm('hello world', 'my string');
 	// dsm($user);
-	dprint_r($user);
+	// dprint_r($user);
 	// print_r($user);
 }
