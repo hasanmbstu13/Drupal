@@ -1,0 +1,17 @@
+<?php 
+/**
+ * Implements hook_init()
+ *
+ * Runs on every page
+ */
+function devel_example_init() {
+	global $user;
+	// krumo($user);
+	kpr($user);
+	// debug($user);
+	// dsm($user, 'variable 1');
+	// dsm('hello world', 'my string');
+	// dsm($user);
+	dprint_r($user);
+	// print_r($user);
+}

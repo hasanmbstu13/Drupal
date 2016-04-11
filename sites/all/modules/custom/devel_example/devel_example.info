@@ -1,0 +1,4 @@
+name = Devel-Example
+description = Testing purpose
+package = Development
+core = 7.x
